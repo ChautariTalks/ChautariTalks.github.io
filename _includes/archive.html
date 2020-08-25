@@ -1,11 +1,14 @@
-{% assign default_img = "https://user-images.githubusercontent.com/4943215/74586455-c8048300-4fe7-11ea-84ba-aa49f3abb014.jpeg" %}
 <article>
   <header><h1>{{ include.title | default: page.title }}</h1></header>
   <div class="archive" style="display: inline-grid;grid-template-columns: auto auto auto; grid-gap: 30px;">
     {% for post in site.posts %}
     <div style="display: inherit;padding: 20px">
       <a href="{{ post.url | relative_url }}">
-        <img src="{{ post.thumbnail | default_img }}" alt="Coffee">
+	{% if post.thumbnail %}        
+	<img src="{{ post.thumbnail }}" alt="{{ post.title }}">
+	{% else %}
+	<img src="https://user-images.githubusercontent.com/4943215/74586455-c8048300-4fe7-11ea-84ba-aa49f3abb014.jpeg" alt="{{ post.title }}">
+	{% endif %}
         {{ post.title }}
       </a>
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>

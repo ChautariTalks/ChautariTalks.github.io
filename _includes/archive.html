@@ -4,7 +4,7 @@
     {% for post in site.posts %}
     <div style="display: inherit;padding: 20px">
       <a href="{{ post.url | relative_url }}">
-        <img src="{{ post.thumbnail | 'https://user-images.githubusercontent.com/4943215/74586455-c8048300-4fe7-11ea-84ba-aa49f3abb014.jpeg'" alt="Coffee">
+        <img src="{{ post.thumbnail | "https://user-images.githubusercontent.com/4943215/74586455-c8048300-4fe7-11ea-84ba-aa49f3abb014.jpeg"}}" alt="Coffee">
         {{ post.title }}
       </a>
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>

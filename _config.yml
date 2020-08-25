@@ -26,8 +26,8 @@ navigation:
   - {file: "README.md", icon: address-card}
 
 external:                    # see http://fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:chautari.talks@gmail.com"}
-  - {title: Github, icon: github, url: "https://github.com/ChautariTalks/"}
+#  - {title: Mail, icon: envelope, url: "mailto:chautari.talks@gmail.com"}
+#  - {title: Github, icon: github, url: "https://github.com/ChautariTalks/"}
 #  - {title: Subscribe, icon: rss, url: "/feed.xml"}
 
 comments:
